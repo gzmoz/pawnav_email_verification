@@ -25,15 +25,15 @@
 </head>
 <body>
   <div class="card">
-    <h1>✅ Email Confirmed!</h1>
+    <h1> Email Confirmed!</h1>
     <p>Redirecting you to the PawNav app...</p>
   </div>
 
   <script>
-    // 1️⃣ App’i açmayı dene
+    // try to open app
     window.location.href = 'pawnav://auth-callback';
 
-    // 2️⃣ Eğer app yüklü değilse 2 saniye sonra Google Play'e yönlendir
+    // if it's not downloaded
     setTimeout(() => {
       window.location.href = 'https://play.google.com/store/apps/details?id=com.pawnav';
     }, 2000);
