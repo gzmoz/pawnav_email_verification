@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Verified</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 { color: #2B417B; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>✅ Email Confirmed!</h1>
+    <p>Redirecting you to the PawNav app...</p>
+  </div>
+
+  <script>
+    // 1️⃣ App’i açmayı dene
+    window.location.href = 'pawnav://auth-callback';
+
+    // 2️⃣ Eğer app yüklü değilse 2 saniye sonra Google Play'e yönlendir
+    setTimeout(() => {
+      window.location.href = 'https://play.google.com/store/apps/details?id=com.pawnav';
+    }, 2000);
+  </script>
+</body>
+</html>
